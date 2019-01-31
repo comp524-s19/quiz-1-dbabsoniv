@@ -1,4 +1,4 @@
-finalGrade :: [x] -> [y] -> Int
+finalGrade :: [Int] -> [Int] -> Int
 finalGrade xs ys = case xs of [] -> 0
-                              [x] -> ( (head x)*(head y)/(head y) )
-                              xs -> ( (head x)*(head y)/(head y) ) + (finalGrade (tail x) (tail y) )
+                              [x] -> ( (head xs)*(head ys) `div` (head ys) )
+                              xs -> ( (head xs)*(head ys) `div` (head ys) ) + (finalGrade (tail xs) (tail ys) )
